@@ -1,0 +1,32 @@
+<div class="card">
+
+    <div class="card-header">
+        <h1 align="center">CALCULATOR</h1>
+    </div>
+
+    <div class="card-body">
+        <div class="form-group">
+            <label>Enter first number: </label>
+            <input [(ngModel)]="a" type="number" name="a" class="form-controller">
+        </div> <hr>
+
+        <div class="form-group">
+            <label>Enter second number: </label>
+            <input [(ngModel)]="b" type="number" name="b" class="form-controller">
+        </div> <hr>
+
+        <div class="form-group" *ngIf="op == 1">
+            <label>Result: {{res}} </label>
+        </div> <hr>
+
+        <p *ngIf="op == 2">Division by zero is impossible</p>
+
+        <div class="form-group">
+            <button style="background-color: blueviolet;" class="btn btn-add" (click)="add()">+</button>
+            <button style="background-color: brown;" class="btn btn-sub" (click)="sub()">-</button>
+            <button style="background-color: burlywood;" class="btn btn-mul" (click)="mul()">*</button>
+            <button style="background-color: chartreuse;" class="btn btn-div" (click)="div()">/</button>
+        </div>
+    </div>
+
+</div>
